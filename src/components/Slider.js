@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import { Image } from "@chakra-ui/image";
 
-export default function SimpleSlider() {
+export default function SimpleSlider({ product }) {
     var settings = {
         dots: true,
         infinite: true,
@@ -15,13 +15,13 @@ export default function SimpleSlider() {
     return (
         <Slider {...settings}>
             <div>
-                <Image src="https://i.pinimg.com/originals/1e/06/e1/1e06e107f0ca520aed316957b685ef5c.jpg" />
+                <Image src={product.heroSlider_1} maxW="500px" w="100%" />
             </div>
             <div>
-                <Image src="https://i.pinimg.com/originals/1e/06/e1/1e06e107f0ca520aed316957b685ef5c.jpg" />
+                <Image src={product.heroSlider_2} maxW="500px" w="100%" />
             </div>
             <div>
-                <Image src="https://i.pinimg.com/originals/1e/06/e1/1e06e107f0ca520aed316957b685ef5c.jpg" />
+                <Image src={product.heroSlider_3} maxW="500px" w="100%" />
             </div>
 
         </Slider>

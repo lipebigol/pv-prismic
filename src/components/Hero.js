@@ -13,9 +13,14 @@ export default function Hero({ product }) {
                 return (
                     <Flex justify="center" borderBottom="4px" pb="6" borderColor="gray.200" direction={["column", "column", "row"]} align="center" key={product.heroTitle}>
                         <Box w={["100%", "100%", "50%"]} p="4">
-                            <Slider />
+
+                            <Slider
+                                product={product}
+                            />
+
+
                         </Box>
-                        <Box w={["100%", "100%", "50%"]} mt={["6", "6", "0"]} p="4">
+                        <Box w={["100%", "100%", "50%"]} p="4">
                             <Flex align="center">
                                 <Icon as={FaStar} color="yellow.400" />
                                 <Icon as={FaStar} color="yellow.400" />
@@ -40,7 +45,7 @@ export default function Hero({ product }) {
                                 <Text ml="2" lineHeight="1.2"> <b> Troca Fácil</b> <br />A devolução é por nossa conta.</Text>
                             </Flex>
 
-                            <Button colorScheme="whatsapp" size="lg" px="20" borderRadius="full" w={["90%", "90%", "50%"]}>
+                            <Button colorScheme="whatsapp" size="lg" px="20" borderRadius="full" w={["100%", "100%", "50%"]}>
                                 Escolher Oferta
                             </Button>
                         </Box>
