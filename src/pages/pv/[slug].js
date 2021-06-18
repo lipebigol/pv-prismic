@@ -8,6 +8,7 @@ import FooterBottom from '../../components/FooterBottom'
 import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 import Comments from '../../components/Comments'
+import Pricing from '../../components/Pricing'
 
 
 
@@ -23,6 +24,8 @@ export default function Pv({ product }) {
                 <Hero product={product} />
 
                 <Section product={product} />
+
+                <Pricing product={product} />
 
                 <Comments product={product} />
 
@@ -85,6 +88,18 @@ export const getStaticProps = async (context) => {
                 commentName: commentsInfo.comments_name,
                 commentTime: commentsInfo.comments_time,
                 commentText: commentsInfo.comments_text,
+            }
+        }),
+
+        pricing: response.data.pricing.map(pricingInfo => {
+            return {
+                pricingImage: pricingInfo.pricing_image.url,
+                pricingUnit: pricingInfo.pricing_units,
+                pricingPercent: pricingInfo.pricing_percent,
+                pricingOld: pricingInfo.pricing_oldprice,
+                pricingPrice: pricingInfo.pricing_price,
+                pricingParcela: pricingInfo.pricing_parcela,
+                pricingLink: pricingInfo.pricing_link.url,
             }
         }),
 

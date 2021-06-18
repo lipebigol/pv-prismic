@@ -5,7 +5,7 @@ export default function Section({ product }) {
         <>
             {product.section.map(product => {
                 return (
-                    <Flex direction="column" textAlign="center" justify="center" key={product.sectionTitle}>
+                    <Flex direction="column" textAlign="center" justify="center" color="gray.700" key={product.sectionTitle}>
                         <VStack my="6">
                             <Image src={product.sectionImage} w="900px" maxH="300px" objectFit="contain" />
                             <Heading fontSize="2xl">{product.sectionTitle}</Heading>

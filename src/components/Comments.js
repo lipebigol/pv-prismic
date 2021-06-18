@@ -5,7 +5,7 @@ import { FaStar, FaStarHalfAlt } from 'react-icons/fa'
 export default function Comments({ product }) {
     return (
         <>
-            <Flex direction="column" justify="center" >
+            <Flex direction="column" justify="center" color="gray.700">
                 <Heading mb="2">Avaliações de Clientes</Heading>
                 <Flex align="center" mb="2">
                     <Heading>4.9</Heading>
