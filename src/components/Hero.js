@@ -2,7 +2,6 @@ import { Flex, Box, Icon, Text, Heading, Button } from "@chakra-ui/react"
 import { FaStar, FaStarHalfAlt, FaShippingFast, FaCheckCircle } from 'react-icons/fa'
 import { BsArrowCounterclockwise } from 'react-icons/bs'
 import Slider from './Slider'
-import { RichText } from "prismic-dom"
 
 export default function Hero({ product }) {
     return (

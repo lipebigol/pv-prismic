@@ -24,7 +24,7 @@ export default function Pv({ product }) {
 
                 <Section product={product} />
 
-                <Comments />
+                <Comments product={product} />
 
             </Flex>
             <Footer />
@@ -77,6 +77,14 @@ export const getStaticProps = async (context) => {
                 sectionTitle: sectionInfo.section_title,
                 sectionSub: sectionInfo.section_sub,
                 sectionDescription: sectionInfo.section_description
+            }
+        }),
+
+        comments: response.data.comments.map(commentsInfo => {
+            return {
+                commentName: commentsInfo.comments_name,
+                commentTime: commentsInfo.comments_time,
+                commentText: commentsInfo.comments_text,
             }
         }),
 
