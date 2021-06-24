@@ -20,6 +20,8 @@ class MyDocument extends Document {
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-P45ZFZH');`}} />
 
+                    <meta name="facebook-domain-verification" content="54gnpvp4cuipum1lg8x1mdlahbdikx" />
+
                 </Head>
                 <body>
 
