@@ -9,6 +9,7 @@ import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 import Comments from '../../components/Comments'
 import Pricing from '../../components/Pricing'
+import Head from 'next/head'
 
 
 
@@ -17,6 +18,14 @@ export default function Pv({ product }) {
     return (
 
         <>
+
+            {product.hero.map(product => {
+                return (
+                    <Head key={product.heroTitle}>
+                        <title>{product.heroTitle}</title>
+                    </Head>
+                )
+            })}
 
             <Header />
             <Flex direction="column" maxW="1140px" mx="auto" px={["4", "4", "0"]}>
