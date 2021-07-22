@@ -32,7 +32,8 @@ export default function Ofr({ offer }) {
 
                 <Flex justifyContent="center" position="relative">
 
-                    <Image src={offer.banner} />
+                    <Image src={offer.banner} display={["none", "block"]} />
+                    <Image src={offer.bannerMobile} display={["block", "none"]} />
                 </Flex>
 
                 <Flex direction="column" margin="0 auto" maxW="1100px" margin="0 auto" px={["4", "4", "0"]}>
@@ -58,8 +59,7 @@ export default function Ofr({ offer }) {
                         <Grid templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(3, 1fr)"]} gap={6} m="6">
                             {offer.kit.map(kit => {
                                 return (
-
-                                    <Link href={kit.link} key={kit.kit_units}>
+                                    <Link key={kit.units} href={kit.link}>
                                         <a>
                                             <Flex border="4px" borderColor="#f9f9f9" borderRadius="lg" shadow="base" p="4" textAlign={["left", "left", "center"]} justify="center" color="gray.700" _hover={{ shadow: "xl" }} direction="column">
 
@@ -169,6 +169,7 @@ export const getStaticProps = async (context) => {
         title: response.data.title,
         aviso: RichText.asText(response.data.aviso),
         banner: response.data.banner.url,
+        bannerMobile: response.data.banner_mobile.url,
         kit: response.data.kit.map(kitInfo => {
             return {
                 image: kitInfo.kit_img.url,
