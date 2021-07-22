@@ -65,7 +65,7 @@ export default function Ofr({ offer }) {
 
                                                 <Flex justifyContent={["space-between", "space-between", "center"]} alignItems="center" direction="column">
 
-                                                    <Image src={kit.image} w="250px" h="250px" objectFit="contain" p="2" />
+                                                    <Image src={kit.image} w="200px" h="200px" objectFit="contain" p="1" />
 
                                                     <Flex direction="column" justifyContent="start">
 
@@ -79,10 +79,10 @@ export default function Ofr({ offer }) {
 
                                                 </Flex>
 
-                                                <Flex bg="#19AF42" border="1px" borderColor="#08501B" px="12" py="2" rounded="md" fontSize="2xl" color="white" fontWeight="bold" margin="0 auto">
+                                                <Flex bg="#19AF42" border="1px" borderColor="#08501B" px="8" py="2" rounded="md" fontSize="xl" color="white" fontWeight="bold" margin="0 auto">
                                                     <Text >Selecionar Kit</Text>
                                                 </Flex>
-                                                <Text fontSize="sm" py="4" textAlign="center">Nós garantimos a eficácia de nossos produtos. Se você ficar insatisfeito com o produto, devolveremos o seu dinheiro!</Text>
+                                                <Text fontSize="xs" py="4" textAlign="center">Nós garantimos a eficácia de nossos produtos. Se você ficar insatisfeito com o produto, devolveremos o seu dinheiro!</Text>
 
                                             </Flex>
                                         </a>
@@ -116,7 +116,7 @@ export default function Ofr({ offer }) {
                 </Flex>
             </Box>
 
-            <Box bg="gray.700" mt="12" fontSize="sm" py="6">
+            <Box bg="gray.700" mt="12" fontSize="xs" py="6" px="2">
                 <Flex maxW="1100px" margin=" 0 auto" color="white" direction="column">
                     <Flex justifyContent="space-evenly" fontWeight="bold" mb="6">
                         <Link href="/envio"><a>Rastrear Pedido</a></Link>
