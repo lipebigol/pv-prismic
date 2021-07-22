@@ -32,8 +32,8 @@ export default function Ofr({ offer }) {
 
                 <Flex justifyContent="center" position="relative">
 
-                    <Image src={offer.banner} display={["none", "block"]} />
-                    <Image src={offer.bannerMobile} display={["block", "none"]} />
+                    <Image src={offer.banner} display={["none", , "none", "block"]} />
+                    <Image src={offer.bannerMobile} display={["block", "block", "none"]} />
                 </Flex>
 
                 <Flex direction="column" margin="0 auto" maxW="1100px" margin="0 auto" px={["4", "4", "0"]}>
