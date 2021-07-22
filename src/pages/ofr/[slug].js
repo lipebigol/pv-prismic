@@ -32,7 +32,7 @@ export default function Ofr({ offer }) {
 
                 <Flex justifyContent="center" position="relative">
 
-                    <Image src={offer.banner} display={["none", , "none", "block"]} />
+                    <Image src={offer.banner} display={["none", "none", "block"]} />
                     <Image src={offer.bannerMobile} display={["block", "block", "none"]} />
                 </Flex>
 
@@ -61,16 +61,16 @@ export default function Ofr({ offer }) {
                                 return (
                                     <Link key={kit.units} href={kit.link}>
                                         <a>
-                                            <Flex border="4px" borderColor="#f9f9f9" borderRadius="lg" shadow="base" p="4" textAlign={["left", "left", "center"]} justify="center" color="gray.700" _hover={{ shadow: "xl" }} direction="column">
+                                            <Flex border="4px" borderColor="#f9f9f9" borderRadius="lg" shadow="base" p="4" textAlign="center" justify="center" color="gray.700" _hover={{ shadow: "xl" }} direction="column">
 
-                                                <Flex justifyContent={["space-between", "space-between", "center"]} alignItems="center" direction={["row", "row", "column"]}>
+                                                <Flex justifyContent={["space-between", "space-between", "center"]} alignItems="center" direction="column">
 
-                                                    <Image src={kit.image} w={["150px", "150px", "250px"]} h={["150px", "150px", "250px"]} objectFit="contain" p="2" />
+                                                    <Image src={kit.image} w="250px" h="250px" objectFit="contain" p="2" />
 
                                                     <Flex direction="column" justifyContent="start">
 
                                                         <Text fontWeight="bold" fontSize="2xl" textTransform="uppercase" >{kit.units}</Text>
-                                                        <Flex justify={["start", "start", "center"]}>
+                                                        <Flex justify="center">
                                                             <Text bg="gray.700" w="max-content" px="2" py="0.3" color="white" textTransform="uppercase" fontSize="md" borderRadius="lg">Economia de <Text fontWeight="bold" color="yellow.300" as="span">{kit.percent}%</Text></Text>
                                                         </Flex>
                                                         <Text fontSize="md">de <Text as="s" color="red" >R${kit.priceOlder}</Text> por R${kit.priceNew}</Text>
