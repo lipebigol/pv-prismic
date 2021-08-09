@@ -43,10 +43,10 @@ export default function Ofr({ offer }) {
                     <Flex w="100%" border="1px" borderColor="#e1e1e1" rounded="md" p="6" alignItems="center" justifyContent="space-between" my="12" direction={["column", "column", "row"]}>
                         <Flex alignItems="center">
                             <Image src="https://assets.widitrade.com/assets/templates/5e1743eaef28645604557e92/percentage-icon.png" />
-                            <Text px="4" fontSize="lg"><b>OFERTA ESPECIAL:</b> {offer.aviso} <Text as="i">(até 60% de desconto)</Text> com frete <b>grátis.</b></Text>
+                            <Text px="4" fontSize="lg"><b>OFERTA ESPECIAL:</b> {offer.aviso} <Text as="i">(até 39% de desconto)</Text> com frete <b>grátis.</b></Text>
                         </Flex>
                         <Flex bgGradient="linear(to-l, #5c80fe, #35b6ff)" color="white" px="6" py="2" fontWeight="bold" justifyContent="center" alignItems="center" display={["none", "none", "flex"]}>
-                            <Text mr="4" fontSize="22">60%</Text>
+                            <Text mr="4" fontSize="22">39%</Text>
                             <Text textTransform="uppercase" fontSize="14">Desconto</Text>
                         </Flex>
                     </Flex>
