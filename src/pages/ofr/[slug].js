@@ -138,26 +138,32 @@ export default function Ofr({ offer }) {
                     </Flex>
                 </Flex>
 
+
+
+                <Heading color="#07174A" my="6" px="24px" fontWeight="500" textAlign="center">Conheça os Benefícios do Sérum Preenchedor de Rugas da Diatena
+                </Heading>
+
                 <Grid templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(2, 1fr)"]} maxWidth="1170px" margin="0 auto" my="6">
 
-                    <Heading color="#07174A" gridColumn="span 2" my="6" px="24px" fontWeight="500" textAlign="center">Conheça os Benefícios do Sérum Preenchedor de Rugas da Diatena
-                    </Heading>
+                    {offer.benefit.map(benefit => {
+                        return (
+                            <Flex key={benefit.title} p="24px" justifyContent="center" alignItems="flex-start">
+                                <VStack spacing="4">
 
-                    <Flex direction="column" p="24px" justifyContent="center" alignItems="center">
-                        <VStack spacing="4">
+                                    <Flex direction={["row", "row", "column"]} alignItems={["flex-start", "flex-start", "center"]}>
+                                        <Image src={benefit.image} w={["60px", "60px", "120px"]} h={["60px", "60px", "120px"]} objectFit="cover" border="2px solid #08002D" borderRadius="full" mb="4" />
 
-                            {offer.benefit.map(benefit => {
-                                return (
-                                    <div key={benefit.title}>
-                                        <Image src={benefit.image} w="150px" />
-                                        <Heading color="#07174A" fontSize="xl" mb="2" textAlign="center" fontWeight="500" textTransform="uppercase">{benefit.title}</Heading>
-                                        <Text color="#707070">{benefit.description}</Text>
-                                    </div>
-                                )
-                            })}
-                        </VStack>
-                    </Flex>
+                                        <Flex direction="column" ml={["4", "4", "0"]}>
+                                            <Heading color="#07174A" fontSize="xl" mb="2" textAlign={["left", "left", "center"]} fontWeight="500" textTransform="uppercase">{benefit.title}</Heading>
+                                            <Text color="#707070">{benefit.description}</Text>
+                                        </Flex>
+                                    </Flex>
 
+
+                                </VStack>
+                            </Flex>
+                        )
+                    })}
 
                 </Grid>
 
@@ -177,16 +183,16 @@ export default function Ofr({ offer }) {
 
 
 
-                <Grid templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(3, 1fr)"]} maxWidth="1170px" margin="0 auto" my="6" px={["3", "3", "0"]}>
 
-                    <Heading color="#07174A" gridColumn="span 3" my="6" px="24px" fontWeight="500" textAlign="center">Depoimentos
-                    </Heading>
 
+                <Heading color="#07174A" my="6" px="24px" fontWeight="500" textAlign="center">Depoimentos
+                </Heading>
+                <Grid templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)", "repeat(2, 1fr)"]} gap="6" maxWidth="1170px" margin="0 auto" my="6" px={["3", "3", "0"]}>
 
                     {offer.depoimento.map(depoimento => {
                         return (
-                            <Flex key={depoimento.description} p="16px" alignItems="flex-start" border="1px solid #999" borderRadius="md" shadow="base" bg="white" mb="12">
-                                <Image src={depoimento.image} w="40px" mr="4" />
+                            <Flex key={depoimento.description} p="16px" alignItems="flex-start" border="1px solid #999" borderRadius="md" shadow="base" bg="white" >
+                                <Image src={depoimento.image} w="40px" mr="4" borderRadius="full" />
                                 <Flex direction="column">
                                     <Flex>
                                         <Heading color="#07174A" fontSize="sm" mb="2" fontWeight="500">Compra Verificada</Heading>
