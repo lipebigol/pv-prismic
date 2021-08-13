@@ -42,7 +42,7 @@ export default function Ofr({ offer }) {
 
 
 
-                <Flex maxWidth="1170px" margin={["0 auto", "0 auto", "50px auto"]} alignItems="start" direction={["column", "column", "row"]} px={["2", "2", "0"]}>
+                <Flex maxWidth="1170px" margin={["0 auto", "0 auto", "50px auto"]} alignItems="start" direction={["column", "column", "row"]} px={["2", "2", "0"]} >
 
                     <Flex direction="column">
                         <Flex width={["100%, 100%, 50%"]}>
@@ -65,7 +65,7 @@ export default function Ofr({ offer }) {
                     </Flex>
 
 
-                    <Flex direction="column">
+                    <Flex direction="column" flex="1">
                         <VStack spacing="4" align="stretch">
                             <Flex bg="rgb(221, 187, 119)" width="30%" p="2" borderRadius="full" justifyContent="center" display={["none", "none", "flex"]}>
                                 <Text color="white" fontWeight="500">OFERTA ESPECIAL</Text>
