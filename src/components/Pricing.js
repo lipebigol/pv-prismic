@@ -21,7 +21,7 @@ function components({ product }) {
                             <a>
 
                                 <Flex border="4px" borderColor="#f9f9f9" borderRadius="lg" shadow="base" p="4" textAlign="center" direction="column" justify="center" color="gray.700" _hover={{ shadow: "xl" }}>
-                                    <VStack spacing="1">
+                                    <VStack spacing="1" mb="6">
 
                                         <Image src={product.pricingImage} w="325px" h="325px" />
 
@@ -29,10 +29,11 @@ function components({ product }) {
                                         <Flex justify="center">
                                             <Text bg="gray.700" w="max-content" px="2" py="0.3" color="white" textTransform="uppercase" fontSize="lg" borderRadius="lg">Economia de <Text fontWeight="bold" color="yellow.300" as="span">{`${product.pricingPercent}%`}</Text></Text>
                                         </Flex>
-                                        <Text fontSize="lg">de <Text as="s" color="red" textDecoration="">{`R$${product.pricingOld}`}</Text> por R${`R$${product.pricingPrice}`}</Text>
+                                        <Text fontSize="lg">de <Text as="s" color="#999" textDecoration="">{`R$${product.pricingOld}`}</Text> por R${`R$${product.pricingPrice}`}</Text>
                                         <Text fontSize="2xl" color="gray.600" lineHeight="60px" >12x <Text as="span" fontWeight="bold" fontSize="6xl" color="gray.700">{`R$${product.pricingParcela}`}</Text></Text>
 
-                                        <Image src="/BOTAO-MP.svg" pb="4" />
+                                        <Flex bg="#23A455" shadow="base" color="white" fontWeight="700" fontSize="2xl" borderRadius="md" px="6" py="4">COMPRAR AGORA</Flex>
+                                        <Text fontSize="xs" pt="2" color="#C53030">Nós garantimos a eficácia de nossos produtos. Se você ficar insatisfeito com o produto, devolveremos o seu dinheiro!</Text>
                                     </VStack>
 
                                 </Flex>
